@@ -1,0 +1,127 @@
+{
+  "actors": [
+    {
+      "name": "Camera",
+      "type": "Actor",
+      "tag": "Camera",
+      "active": true,
+      "transform": {
+        "position": [ 0, 0, 5 ],
+        "rotation": [ 0, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "components": [
+        {
+          "type": "CameraComponent",
+          "fov": 70,
+          "near_plane": 0.001,
+          "far_plane": 5000
+        },
+        {
+          "type": "CameraControllerComponent",
+          "speed": 3,
+          "sensitivity": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Light1",
+      "type": "Actor",
+      "tag": "Light",
+      "transform": {
+        "position": [ 0, 0, 2.75 ],
+        "rotation": [ 90, 0, 0 ]
+      },
+      "components": [
+        {
+          "type": "LightComponent",
+          "light_type": "spot",
+          "color": [ 1, 0.92, 0.74 ],
+          "intensity": 0.8,
+          "inner_angle": 10,
+          "outer_angle": 30
+        }
+      ]
+    },
+    {
+      "name": "Table",
+      "type": "Actor",
+      "transform": {
+        "position": [ 0, -1.5, 2.75 ],
+        "rotation": [ 0, 0, 0 ],
+        "scale": [ 1, 1, 0.5 ]
+
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model": "Models/table.gltf"
+        }
+      ]
+    },
+    {
+      "name": "CigarettePack",
+      "type": "Actor",
+      "transform": {
+        "position": [ -0.35, -0.85, 2.65 ],
+        "rotation": [ -90, -5, 0 ],
+        "scale": [ 0.8, 0.8, 0.8 ]
+
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model": "Models/cig_pack.gltf"
+        }
+      ]
+    },
+    {
+      "name": "Notebook",
+      "type": "Actor",
+      "transform": {
+        "position": [ 0, -0.95, 2.8 ],
+        "rotation": [ 0, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model": "Models/notebook.gltf"
+        }
+      ]
+    },
+    {
+      "name": "Flashlight",
+      "type": "Actor",
+      "transform": {
+        "position": [ 0.3, -0.95, 2.6 ],
+        "rotation": [ -90, -105, 0 ],
+        "scale": [ 1, 1, 1 ]
+
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model": "Models/flashlight.gltf"
+        }
+      ]
+    },
+    {
+      "name": "Suitcase",
+      "type": "Actor",
+      "transform": {
+        "position": [ -0.35, -0.9, 2.75 ],
+        "rotation": [ 90, 20, 0 ],
+        "scale": [ 0.75, 0.75, 0.75 ]
+
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model": "Models/suitcase.gltf"
+        }
+      ]
+    }
+  ]
+}

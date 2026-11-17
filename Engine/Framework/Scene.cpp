@@ -86,6 +86,15 @@ namespace nu
 		}
 	}
 
+	void Scene::UpdateGui()
+	{
+		glm::vec3 clearColor = Engine::Get().GetRenderer().GetClearColor();
+
+		ImGui::ColorEdit3("Clear Color", glm::value_ptr(clearColor));
+		Engine::Get().GetRenderer().SetClearColor(clearColor);
+		ImGui::ColorEdit3("Ambient Light", glm::value_ptr(m_ambient));
+	}
+
 	void Scene::Draw(const Renderer& renderer)
 	{
 		FrameUniform frameUniform{};
@@ -107,7 +116,7 @@ namespace nu
 		}
 
 		LightUniform lightUniform{};
-		lightUniform.ambient = glm::vec3{ 0.2f };
+		lightUniform.ambient = m_ambient;
 
 		auto lights = GetActorsByTag<Actor>("Light");
 		for (auto light : lights)

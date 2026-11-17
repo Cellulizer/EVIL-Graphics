@@ -190,7 +190,8 @@
     <None Include="..\Build\Assets\Materials\ogre.instance.json" />
     <None Include="..\Build\Assets\Materials\phong.material.json" />
     <None Include="..\Build\Assets\Materials\tungsten_man.instance.json" />
-    <None Include="..\Build\Assets\Scenes\scene.json" />
+    <None Include="..\Build\Assets\Scenes\assignment_scene.json" />
+    <None Include="..\Build\Assets\Scenes\test_scene.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

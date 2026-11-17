@@ -74,7 +74,7 @@ namespace nu
 		{
 			// todo: process the child node with ProcessNode(child, scene, renderer)
 			// the children are stored in node->mChildren, this is recursive so every node in the tree gets processed
-			ProcessNode(*node->mChildren, scene, renderer);
+			ProcessNode(node->mChildren[i], scene, renderer);
 		}
 	}
 

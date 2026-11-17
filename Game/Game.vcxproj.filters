@@ -24,9 +24,6 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Build\Assets\Scenes\scene.json">
-      <Filter>Assets\Scenes</Filter>
-    </None>
     <None Include="..\Build\Assets\Materials\phong.material.json">
       <Filter>Assets\Materials</Filter>
     </None>
@@ -35,6 +32,12 @@
     </None>
     <None Include="..\Build\Assets\Materials\tungsten_man.instance.json">
       <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Scenes\test_scene.json">
+      <Filter>Assets\Scenes</Filter>
+    </None>
+    <None Include="..\Build\Assets\Scenes\assignment_scene.json">
+      <Filter>Assets\Scenes</Filter>
     </None>
   </ItemGroup>
 </Project>

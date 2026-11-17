@@ -14,6 +14,8 @@ namespace nu
 
 		void Read(const json::value_t& value) override;
 
+		void UpdateGui() override;
+
 	private:
 		LightType m_type = LightType::POINT;
 		glm::vec3 m_color{ 1.0f };

@@ -40,6 +40,8 @@ namespace nu {
 		SDL_GPUTexture* GetGPUSwapchainTexture() const { return m_swapchainTexture; }
 
 		void CreateDepthBuffer();
+		void SetClearColor(const glm::vec3& clearColor) { m_clearColor = clearColor; }
+		const glm::vec3& GetClearColor() const { return m_clearColor; }
 
 		friend class IndexBuffer;
 		friend class VertexBuffer;
@@ -57,5 +59,7 @@ namespace nu {
 
 		SDL_Window* m_window = nullptr;
 		glm::vec2 m_screen_size{ 0, 0 };
+
+		glm::vec3 m_clearColor{ 0 };
 	};
 }

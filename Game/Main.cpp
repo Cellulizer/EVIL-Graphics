@@ -24,7 +24,7 @@ int main()
 	Engine::Get().Initialize();
 
 	Scene scene;
-	scene.Load("Scenes/scene.json");
+	scene.Load("Scenes/assignment_scene.json");
 	auto& renderer = Engine::Get().GetRenderer();
 
 	// MAIN LOOP
@@ -51,7 +51,7 @@ int main()
 
 		// EDITOR
 		Engine::Get().GetEditor().BeginFrame();
-		Engine::Get().GetEditor().Update();
+		Engine::Get().GetEditor().Update(scene);
 
 
 		// RENDER

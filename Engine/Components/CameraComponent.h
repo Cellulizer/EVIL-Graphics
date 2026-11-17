@@ -15,6 +15,8 @@ namespace nu
 
 		void Read(const json::value_t& value) override;
 
+		void UpdateGui() override;
+
 		void SetFOV(float fov) { m_fov = fov; }
 		void GetFOV(float fov) { m_fov = fov; }
 		void SetNearPlane(float nearPlane) { m_nearPlane = nearPlane; }

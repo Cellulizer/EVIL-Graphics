@@ -38,6 +38,9 @@ namespace nu
 
         virtual void Start();
         virtual void Update(float dt);
+
+        void UpdateGui() override;
+
         virtual void Draw(const class Renderer& r) const;
         virtual void OnDestroy();
 
@@ -70,7 +73,7 @@ namespace nu
         bool GetPersistent() const { return m_persistent; }
 
         virtual void Read(const json::value_t& value) override;
-
+        
         void AddComponent(std::unique_ptr<Component> component);
 
         template <std::derived_from<Component> T>

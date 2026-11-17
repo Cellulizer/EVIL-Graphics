@@ -15,6 +15,8 @@ namespace nu
 
 		void Read(const json::value_t value);
 
+		void UpdateGui() override;
+
 	private:
 		float m_cameraSpeed = 1.0f;
 		float m_sensitivity = 1.0f;
