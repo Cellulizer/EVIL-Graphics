@@ -121,6 +121,7 @@ namespace nu
 		auto lights = GetActorsByTag<Actor>("Light");
 		for (auto light : lights)
 		{
+			if (!light->IsActive()) continue;
 			auto lightComponent = light->GetComponent<LightComponent>();
 			if (lightComponent)
 			{

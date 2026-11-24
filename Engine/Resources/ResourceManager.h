@@ -20,6 +20,8 @@ namespace nu
 			requires std::derived_from<T, Resource>
 		res_t<T> GetWithID(const std::string& id, const std::string& name, Args&& ... args);
 
+		const auto& GetAll() const { return m_resources; }
+
 		void Clear() { m_resources.clear(); }
 
 	private:
@@ -53,6 +55,7 @@ namespace nu
 			return res_t<T>();
 		}
 
+		resource->SetName(name);
 		m_resources[name] = resource;
 		std::cout << "Loaded resource: " << name << "\n";
 		return resource;
@@ -92,6 +95,7 @@ namespace nu
 
 		std::cout << "Loaded resource: " << name << "\n";
 		// add resource to resource manager
+		resource->SetName(id);
 		m_resources[id] = resource;
 
 		return resource;

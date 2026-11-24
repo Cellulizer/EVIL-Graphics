@@ -50,4 +50,18 @@ namespace nu
 
 	}
 
+	void ModelComponent::UpdateGui()
+	{
+		ImGui::TextColored({ 1.0f, 0.52f, 1.0f, 1.0f }, "Model");
+		if (m_model) ImGui::Text("%s", m_model->GetName().c_str());
+		else ImGui::Text("<not found>");
+
+		ImGui::TextColored({ 1.0f, 0.52f, 1.0f, 1.0f }, "Materials");
+		for (size_t i = 0; i < m_materials.size(); i++)
+		{
+			ImGui::Text("Material [%d] - %s", i, m_materials[i]->GetName().c_str());
+		}
+
+	}
+
 }

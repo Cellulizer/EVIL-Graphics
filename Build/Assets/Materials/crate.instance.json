@@ -1,0 +1,12 @@
+{
+	"type": "material_instance",
+	"material": "materials/phong-normal.material.json",
+	"emissive_color": [ 1, 1, 1 ],
+	"tiling": [ 1, 1 ],
+	"textures": {
+		"base_map": "textures/space_crate_diffuse.png",
+		"specular_map": "textures/brick_specular.png",
+		"emissive_map": "textures/space_crate_emissive.png",
+		"normal_map": "textures/space_crate_normal.png"
+	}
+}

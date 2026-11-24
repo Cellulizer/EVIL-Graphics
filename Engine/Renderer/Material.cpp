@@ -28,6 +28,8 @@ namespace nu
 		}
 
 		JSON_READ_NAME(document, "base_color", m_defaults.baseColor);
+		JSON_READ_NAME(document, "specular_color", m_defaults.specularColor);
+		JSON_READ_NAME(document, "emissive_color", m_defaults.emissiveColor);
 		JSON_READ_NAME(document, "tiling", m_defaults.tiling);
 		JSON_READ_NAME(document, "offset", m_defaults.offset);
 		JSON_READ_NAME(document, "shininess", m_defaults.shininess);
@@ -45,7 +47,7 @@ namespace nu
 		// shaders
 		std::string vertexShaderName;
 		JSON_READ_NAME(document, "vertex_shader", vertexShaderName);
-		if (!vertexShaderName.empty()) 
+		if (!vertexShaderName.empty())
 			m_vertexShader = Resources().Get<nu::Shader>(vertexShaderName, renderer);
 
 		std::string fragmentShaderName;
@@ -78,5 +80,17 @@ namespace nu
 	{
 		auto it = std::find(m_textureSlots.begin(), m_textureSlots.end(), name);
 		return (it != m_textureSlots.end()) ? (int)std::distance(m_textureSlots.begin(), it) : -1;
+	}
+
+	void Material::UpdateGui()
+	{
+		ImGui::Text("Vertex Shader : %s", m_vertexShader->GetName().c_str());
+		ImGui::Text("Fragment Shader : %s", m_fragmentShader->GetName().c_str());
+		ImGui::TextColored({ 1.0f, 0.52f, 1.0f, 1.0f }, "Texture Slots");
+		ImGui::Separator();
+		for (size_t i = 0; i < m_textureSlots.size(); i++)
+		{
+			ImGui::Text("Texture Slot [%d] : %s", i, m_textureSlots[i].c_str());
+		}
 	}
 }

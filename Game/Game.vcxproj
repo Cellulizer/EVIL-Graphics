@@ -187,10 +187,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Build\Assets\Materials\crate.instance.json" />
+    <None Include="..\Build\Assets\Materials\ground.instance.json" />
+    <None Include="..\Build\Assets\Materials\lava.instance.json" />
+    <None Include="..\Build\Assets\Materials\multisampler.material.json" />
     <None Include="..\Build\Assets\Materials\ogre.instance.json" />
+    <None Include="..\Build\Assets\Materials\phong-normal.material.json" />
     <None Include="..\Build\Assets\Materials\phong.material.json" />
     <None Include="..\Build\Assets\Materials\tungsten_man.instance.json" />
     <None Include="..\Build\Assets\Scenes\assignment_scene.json" />
+    <None Include="..\Build\Assets\Scenes\test_scene-helmert.json" />
     <None Include="..\Build\Assets\Scenes\test_scene.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

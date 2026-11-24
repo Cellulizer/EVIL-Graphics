@@ -13,6 +13,8 @@ namespace nu
 		void Draw(const Renderer& renderer) const override;
 		void Read(const json::value_t& value) override;
 
+		void UpdateGui() override;
+
 	private:
 		res_t<Model> m_model;
 		std::vector<res_t<class MaterialInstance>> m_materials;

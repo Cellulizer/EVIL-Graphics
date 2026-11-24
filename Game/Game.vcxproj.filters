@@ -39,5 +39,23 @@
     <None Include="..\Build\Assets\Scenes\assignment_scene.json">
       <Filter>Assets\Scenes</Filter>
     </None>
+    <None Include="..\Build\Assets\Materials\multisampler.material.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\ground.instance.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\lava.instance.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\phong-normal.material.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\crate.instance.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Scenes\test_scene-helmert.json">
+      <Filter>Assets\Scenes</Filter>
+    </None>
   </ItemGroup>
 </Project>
