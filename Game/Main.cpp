@@ -1,15 +1,6 @@
 #include "Engine.h"
-#include "Renderer/Shader.h"
-#include "Renderer/VertexBuffer.h"
-#include "Renderer/IndexBuffer.h"
-#include "Renderer/Pipeline.h"
-#include "Resources/ResourceManager.h"
 #include "Framework/Scene.h"
-#include "Components/CameraComponent.h"
-#include "Renderer/Uniforms.h"
-#include <vector>
-#include <map>
-#include <memory>
+
 
 using namespace nu;
 
@@ -24,7 +15,7 @@ int main()
 	Engine::Get().Initialize();
 
 	Scene scene;
-	scene.Load("Scenes/test_scene.json");
+	scene.Load("Scenes/test_scene-skybox.json");
 	auto& renderer = Engine::Get().GetRenderer();
 
 	// MAIN LOOP

@@ -124,8 +124,8 @@ namespace nu
     {
         SDL_GPUTextureSamplerBinding binding
         {
-            .texture = texture.m_gpuTexture,
-            .sampler = texture.m_gpuSampler
+            .texture = texture.GetGPUTexture(),
+            .sampler = texture.GetGPUSampler()
         };
 
         SDL_BindGPUFragmentSamplers(m_render_pass, slot, &binding, 1);

@@ -54,7 +54,19 @@
     <None Include="..\Build\Assets\Materials\crate.instance.json">
       <Filter>Assets\Materials</Filter>
     </None>
-    <None Include="..\Build\Assets\Scenes\test_scene-helmert.json">
+    <None Include="..\Build\Assets\Scenes\test_scene-helmet.json">
+      <Filter>Assets\Scenes</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\phong-default.material.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\skybox.instance.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\skybox.material.json">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\Build\Assets\Scenes\test_scene-skybox.json">
       <Filter>Assets\Scenes</Filter>
     </None>
   </ItemGroup>
